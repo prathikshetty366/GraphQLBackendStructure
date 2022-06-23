@@ -1,0 +1,67 @@
+mutation {
+  addBook(name:"stories We never Tell", genre:"Fiction",authorId:"62b43e10054e77488b32f694"){
+    name
+    genre
+  }
+}
+
+mutation {
+  addAuthor(name: "Akshay",age:25) {
+    name
+    age
+  }
+}
+//all Books(GET)
+{
+  books{
+    name
+    genre
+  }
+}
+//all authors(GET)
+{
+  authors{
+    name
+    age
+  }
+}
+
+//particular Book by its ID
+{
+  book(id:"62b4415554c6d1f7b36ee46b"){
+    name
+    genre
+  }
+}
+
+//particular book with its author
+{
+  book(id:"62b4415554c6d1f7b36ee46b"){
+    name
+    genre
+    author{
+      name
+      age
+    }
+  }
+}
+//all authors with their books
+{
+  authors{
+    books{
+      name
+      genre
+    }
+  }
+}
+//all books with its authors
+{
+  books{
+    name
+    genre
+    author{
+      name
+      age
+    }
+  }
+}
